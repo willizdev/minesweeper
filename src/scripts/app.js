@@ -61,10 +61,14 @@ function emptySpace(board, numbers, i, j) {
     if (i >= 0 && j >= 0 && i < cols && j < rows && board[i][j] != -3) {
         if (numbers[i][j] == 0) {
             board[i][j] = -3;
+            emptySpace(board, numbers, i - 1, j - 1);
             emptySpace(board, numbers, i - 1, j);
-            emptySpace(board, numbers, i + 1, j);
+            emptySpace(board, numbers, i - 1, j + 1);
             emptySpace(board, numbers, i, j - 1);
             emptySpace(board, numbers, i, j + 1);
+            emptySpace(board, numbers, i + 1, j - 1);
+            emptySpace(board, numbers, i + 1, j);
+            emptySpace(board, numbers, i + 1, j + 1);
         } else {
             board[i][j] = numbers[i][j];
         }
