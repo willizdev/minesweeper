@@ -1,0 +1,51 @@
+#main {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#board div {
+    display: flex;
+}
+
+#board div span {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #2d2d2d;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#board div span.c1 * { color: #e7f6ff; }
+#board div span.c2 * { color: #91d3ff; }
+#board div span.c3 * { color: #3ab0ff; }
+#board div span.c4 * { color: #12a0ff; }
+
+#board div span.active {
+    background-color: #222222;
+}
+
+#board div span img {
+    height: 45%;
+    width: 45%;
+}
+
+#board div span p {
+    font-weight: 900;
+    font-size: 1.2em;
+}
