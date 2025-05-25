@@ -116,7 +116,7 @@ function showBoard(board, showMines) {
 
             if (number == -1 && showMines) {
                 const img = document.createElement("img");
-                img.src = "../assets/mine.svg";
+                img.src = "./images/mine.svg";
                 img.alt = "mine";
                 span.appendChild(img);
                 span.classList.add("active");
@@ -124,7 +124,7 @@ function showBoard(board, showMines) {
 
             if (number == -2) {
                 const img = document.createElement("img");
-                img.src = "../assets/flag.svg";
+                img.src = "./images/flag.svg";
                 img.alt = "flag";
                 span.appendChild(img);
                 span.classList.add("active");
@@ -194,3 +194,5 @@ function startGame() {
         }
     }
 }
+
+startGame();
